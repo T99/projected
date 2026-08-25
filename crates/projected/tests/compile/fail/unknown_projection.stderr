@@ -1,0 +1,5 @@
+error: unknown projection `Undeclared`; field-level attributes cannot declare projections
+ --> tests/ui/fail/unknown_projection.rs:5:22
+  |
+5 |     #[projected(exclude(Undeclared))]
+  |                         ^^^^^^^^^^

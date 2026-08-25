@@ -1,0 +1,11 @@
+error: duplicate projection declaration `Api`
+ --> tests/ui/fail/duplicate_projection.rs:3:30
+  |
+3 | #[projected(projections(Api, Api(exclude(value))))]
+  |                              ^^^
+
+error: first declared here
+ --> tests/ui/fail/duplicate_projection.rs:3:25
+  |
+3 | #[projected(projections(Api, Api(exclude(value))))]
+  |                         ^^^

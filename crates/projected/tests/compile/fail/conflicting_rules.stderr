@@ -1,0 +1,11 @@
+error: conflicting explicit selection rules for this field and projection
+ --> tests/ui/fail/conflicting_rules.rs:5:14
+  |
+5 |     #[projected(exclude(Api))]
+  |                 ^^^^^^^
+
+error: previous explicit rule is here
+ --> tests/ui/fail/conflicting_rules.rs:3:37
+  |
+3 | #[projected(projections(Api(include(value))))]
+  |                                     ^^^^^

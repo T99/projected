@@ -1,0 +1,5 @@
+error: projected can only be used on structs with named fields; unit structs are not supported
+ --> tests/ui/fail/unit_struct.rs:4:8
+  |
+4 | struct Source;
+  |        ^^^^^^

@@ -1,0 +1,11 @@
+error: duplicate field specification `value`
+ --> tests/ui/fail/duplicate_field.rs:3:44
+  |
+3 | #[projected(projections(Api(include(value, value))))]
+  |                                            ^^^^^
+
+error: first specified here
+ --> tests/ui/fail/duplicate_field.rs:3:37
+  |
+3 | #[projected(projections(Api(include(value, value))))]
+  |                                     ^^^^^

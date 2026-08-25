@@ -1,0 +1,23 @@
+[workspace]
+resolver = "3"
+members = [
+	"crates/projected",
+	"crates/projected-derive",
+	"crates/projected-seaorm",
+	"crates/projected-seaorm-codegen",
+    "crates/projected-tests",
+]
+
+[workspace.dependencies]
+heck = "0.5.0"
+proc-macro2 = "1.0.107"
+proc-macro-crate = "3.5.0"
+quote = "1.0.47"
+sea-orm = { version = "2.0.2", features = ["macros"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+syn = { version = "3.0.4", features = ["full", "visit"] }
+trybuild = "1.0.116"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"

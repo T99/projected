@@ -1,0 +1,5 @@
+error: projected can only be used on structs with named fields; tuple structs are not supported
+ --> tests/ui/fail/tuple_struct.rs:4:14
+  |
+4 | struct Source(i32);
+  |              ^^^^^

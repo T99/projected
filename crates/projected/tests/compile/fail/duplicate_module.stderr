@@ -1,0 +1,5 @@
+error: duplicate `module` configuration
+ --> tests/ui/fail/duplicate_module.rs:3:21
+  |
+3 | #[projected(module, module = views, projections(Public))]
+  |                     ^^^^^^

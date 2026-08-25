@@ -1,0 +1,5 @@
+error: unknown projected option; expected projections, module, projection_derives, propagate, orderable, emit, or sea_orm
+ --> tests/ui/fail/unknown_projected_option.rs:3:13
+  |
+3 | #[projected(modul, projections(Public))]
+  |             ^^^^^

@@ -1,0 +1,5 @@
+error: expected `,`
+ --> tests/ui/fail/malformed.rs:3:44
+  |
+3 | #[projected(projections(Api(include(value) optional(value))))]
+  |                                            ^^^^^^^^

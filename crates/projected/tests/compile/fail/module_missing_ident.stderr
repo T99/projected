@@ -1,0 +1,5 @@
+error: expected identifier
+ --> tests/ui/fail/module_missing_ident.rs:3:21
+  |
+3 | #[projected(module =, projections(Public))]
+  |                     ^

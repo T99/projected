@@ -1,0 +1,15 @@
+[package]
+name = "projected"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+projected-derive = { path = "../projected-derive" }
+serde.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
+trybuild.workspace = true
+
+[lints]
+workspace = true

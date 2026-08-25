@@ -1,0 +1,18 @@
+[package]
+name = "projected-derive"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+heck.workspace = true
+proc-macro2.workspace = true
+proc-macro-crate.workspace = true
+projected-seaorm-codegen = { path = "../projected-seaorm-codegen" }
+quote.workspace = true
+syn.workspace = true
+
+[lints]
+workspace = true

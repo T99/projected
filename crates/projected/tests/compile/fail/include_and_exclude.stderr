@@ -1,0 +1,11 @@
+error: a projection cannot use both `include` and `exclude` selection rules
+ --> tests/ui/fail/include_and_exclude.rs:3:45
+  |
+3 | #[projected(projections(Api(include(first), exclude(second))))]
+  |                                             ^^^^^^^
+
+error: the `include` rule is here
+ --> tests/ui/fail/include_and_exclude.rs:3:29
+  |
+3 | #[projected(projections(Api(include(first), exclude(second))))]
+  |                             ^^^^^^^
