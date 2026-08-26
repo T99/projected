@@ -2,7 +2,7 @@
 resolver = "3"
 members = [
 	"crates/projected",
-	"crates/projected-derive",
+	"crates/projected-derive", "crates/projected-derive2",
 	"crates/projected-seaorm",
 	"crates/projected-seaorm-codegen",
     "crates/projected-tests",

@@ -1505,6 +1505,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "projected-derive2"
+version = "0.1.0"
+dependencies = [
+ "heck 0.5.0",
+ "proc-macro-crate",
+ "proc-macro2",
+ "quote",
+ "syn 3.0.4",
+]
+
+[[package]]
 name = "projected-seaorm"
 version = "0.1.0"
 dependencies = [

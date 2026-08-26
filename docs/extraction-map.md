@@ -62,7 +62,7 @@ mappings remain future integration work; ordinary traits should be tested before
 
 | Athena coverage | Ported destination                                                     | Coverage |
 | --- |------------------------------------------------------------------------| --- |
-| projection unit tests in `crates/core/src/traits/projection.rs` | `crates/projected/tests/projection.rs`                                 | Selection, nested optional values, completion/fallback order, lossless conversion, field rules, generics/lifetimes/const generics/where clauses, `cfg`, propagation, modules, and metadata mapping. |
+| projection unit tests in `crates/core/src/traits/projection.rs` | `../crates/projected/tests/projection.rs`                                 | Selection, nested optional values, completion/fallback order, lossless conversion, field rules, generics/lifetimes/const generics/where clauses, `cfg`, propagation, modules, and metadata mapping. |
 | ordering unit tests in `crates/core/src/traits/orderable.rs` | `crates/projected/tests/order.rs`                                      | Default names, container/field/directional Serde renames, field skip, projection ordering, and shared-field identity. |
 | `crates/core/tests/projectable_ui.rs` | `crates/projected/tests/compile.rs`                                    | Trybuild pass/fail harness under the public `#[projected]` syntax. |
 | `tests/ui/projectable/pass/plain.rs`, `modules.rs`, safe-derive fixtures | `crates/projected/tests/compile/pass/`                                 | Plain structs, modules, safe inheritance, and ordering. |

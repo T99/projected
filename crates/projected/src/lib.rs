@@ -15,15 +15,3 @@ pub use projection::Projection;
 
 #[doc(hidden)]
 pub use projected_derive::__Projected;
-
-#[projected(
-	projections(
-		PartialOptional(include(name), optional(age)),
-		OptionalFields(optional(name, age))
-	)
-)]
-struct MyStruct {
-	pub name: String,
-	pub age: u32,
-	pub email: String,
-}

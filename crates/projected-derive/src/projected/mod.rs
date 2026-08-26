@@ -1,5 +1,5 @@
 use crate::projected::models::{AttributePolicy, SourceModel};
-use crate::util::real_crate_path;
+use crate::util::{fields_mut, real_crate_path};
 use proc_macro::TokenStream;
 use quote::quote;
 use syn::{Attribute, DeriveInput, Fields, ItemStruct, Meta, parse_macro_input, parse_quote};
@@ -67,17 +67,7 @@ fn prepare_item(args: proc_macro2::TokenStream, item: &mut ItemStruct) -> syn::R
 	Ok(())
 }
 
-/// Provides one uniform mutable iterator over every struct field shape.
-///
-/// Unsupported tuple and unit structs are diagnosed in the later derive phase;
-/// this phase still needs to preserve them so the error points at the item.
-fn fields_mut(fields: &mut Fields) -> Box<dyn Iterator<Item = &mut syn::Field> + '_> {
-	match fields {
-		Fields::Named(fields) => Box::new(fields.named.iter_mut()),
-		Fields::Unnamed(fields) => Box::new(fields.unnamed.iter_mut()),
-		Fields::Unit => Box::new(std::iter::empty()),
-	}
-}
+
 
 /// Converts a public field-level `#[projected(...)]` attribute into hidden
 /// metadata while preserving its original argument tokens and spans.

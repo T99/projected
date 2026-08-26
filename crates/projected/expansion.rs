@@ -1,5 +1,5 @@
 mod optional {
-    use projected::projected;
+    use projected::*;
     #[projected_internal(
         projections(
             PartialOptional(include(name), optional(age)),
@@ -389,27 +389,11 @@ mod optional {
             <Self as ::projected::Projection>::complete(self, missing)
         }
     }
-    extern crate test;
-    #[rustc_test_marker = "optional::asd"]
-    #[doc(hidden)]
-    pub const asd: test::TestDescAndFn = test::TestDescAndFn {
-        desc: test::TestDesc {
-            name: test::StaticTestName("optional::asd"),
-            ignore: false,
-            ignore_message: ::core::option::Option::None,
-            source_file: "crates/projected/tests/projected/optional.rs",
-            start_line: 16usize,
-            start_col: 4usize,
-            end_line: 16usize,
-            end_col: 7usize,
-            compile_fail: false,
-            no_run: false,
-            should_panic: test::ShouldPanic::No,
-            test_type: test::TestType::Unknown,
-        },
-        testfn: test::StaticTestFn(#[coverage(off)] || test::assert_test_result(asd())),
-    };
     fn asd() {
-        let a = MyStruct {};
+        let a = MyStruct {
+            name: "Alice".to_string(),
+            age: 30,
+            email: "alice@example.com".to_string(),
+        };
     }
 }
